@@ -137,13 +137,13 @@ end)
 EgglerButtons[2].MouseButton1Click:Connect(function()
 	fireclickdetector(workspace["EggTeleport"].ClickDetector)
 end)
-for i = 3, 5 do
+for i = 3, 4 do
 	EgglerButtons[i].MouseButton1Click:Connect(function()
 		local part = Workspace:WaitForChild("TrialCompletedPoints"):WaitForChild("Trial " .. (i - 1)):FindFirstChild("root")
 		if part then LocalPlayer.Character.HumanoidRootPart.CFrame = part.CFrame end
 	end)
 end
-
-
-
-
+EgglerButtons[5].MouseButton1Click:Connect(function()
+	local part = Workspace:WaitForChild("TrialCompletedPoints"):WaitForChild("Trial 1"):FindFirstChild("root")
+	if part then LocalPlayer.Character.HumanoidRootPart.CFrame = part.CFrame end
+end)
